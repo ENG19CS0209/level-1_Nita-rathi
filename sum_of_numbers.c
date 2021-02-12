@@ -1,20 +1,55 @@
 #include<stdio.h>
+
+int IntputLimit();
+int* ReadArray();
+int CalculateSum();
+void DisplaySum();
+
+
 int main()
 {
-int n,s=0;
-printf("Enter total number of values ");
-scanf("%d", &n);
-int arr[a];
-printf("enter %d numbers", n);
-for(int i=0;i<n;i++)
+    int n,sum=0;
+    n=IntputLimit();
+    int arr[n];
+    int* ptr=ReadArray(n,arr);
+    sum=CalculateSum(n,ptr);
+    DisplaySum(sum);  
+}
+
+
+int IntputLimit()
 {
-scanf("%d", &a[i]);
+    int n;
+    printf("Enter the number  : ");
+    scanf("%d",&n);
+    return n;
 }
-for(int i=0;i<n;i++)
+
+int* ReadArray(int n,int arr[])
 {
-s=s+a[i];
+    int i;
+    for(i=0;i<n;i++)
+    {
+        printf("Enter the %d element : ",i);
+        scanf("%d",&arr[i]);
+       
+    }
+    return arr;
 }
-printf("Sum of the given %d numbers is %d", n,s);
-return 0;
+
+int CalculateSum(int n,int *ptr)
+{
+    int i,sum=0;
+    for(i=0;i<n;i++)
+    {
+        sum = sum + *(ptr+i);
+    }
+    return sum;
 }
+
+void DisplaySum(int sum)
+{
+    printf("sum of the given numbers is : %d",sum);
+}
+
 
