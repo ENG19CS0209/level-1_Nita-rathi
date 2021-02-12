@@ -1,56 +1,48 @@
-//WAP to find the dista#include <stdio.h>
-
+#include <stdio.h>
 #include <math.h>
-
-
+ 
+float distance(float x1, float x2, float y1, float y2)
+{
+    float distance;
+    distance = sqrt((x1 - y1) * (x1 - y1) + (x2 - y2) * (x2 - y2));
+    return distance;
+}
 float input()
-
 {
-
-      float n;
-
-	  printf("\n enter number:");
-
-	  scanf("%f",&n);
-
-	  return n;
-
+    float  a,b,c,d;
+    printf("\nEnter The Coordinates of Point A:\n");
+    printf("\nX -  Coordinate: \t");
+    scanf("%f", &a);
+    printf("\nY - Axis : \t");
+    scanf("%f", &b);    
+    printf("\nEnter The Coordinates of Point b:\n");
+    printf("\nX - Axis : \t");
+    scanf("%f", &c);
+    printf("\nY - Axis: \t");
+    scanf("%f", &d);    
 }
-
-float distance(float a,float b)
-
+float output(result)
+float result ;
 {
-
-     float distance;
-
-	 distance =sqrt(a*a+b*b);
-
-	 return distance;
-
-}
-
-void output(float n)
-
-{
-
-     printf("\n the distance is %f:", n);
-
+    printf("\nDistance between Points A and B: %f\n", result);
 }
 
 int main()
-
 {
+    float result, a, b, c, d;
+    printf("\nEnter The Coordinates of Point A:\n");
+    printf("\nX - Axis : \t");
+    scanf("%f", &a);
+    printf("\nY- Axis : \t");
+    scanf("%f", &b);    
+    printf("\nEnter The Coordinates of Point B:\n");
+    printf("\nX- Axis:\t");
+    scanf("%f", &c);
+    printf("\nY - Axis : \t");
+    scanf("%f", &d);
+    result = distance(a, b, c, d);
+    output(result);
+    return 0;
+}
 
-float x,y,z;
 
-x=input();
-
-y=input();
-
-z=distance(x,y)
-
-output(z);
-
-return 0;
-
-nce between two point using 4 functions.
