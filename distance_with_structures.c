@@ -1,4 +1,4 @@
-
+#include <stdio.h>
 #include <math.h>
 
 struct coordinates {
@@ -24,3 +24,5 @@ int main()
     printf("Distance between a and b: %lf\n", d);
     return 0;
 }
+
+
